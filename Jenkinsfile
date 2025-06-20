@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Docker Login') {
             steps {
-                sh'echo dckr_pat_tpK-eSkoivTX2ip34AVUonbA2aI | docker login -u rishikeshkumar5147 --password-stdin'
+                sh'echo  | docker login -u rishikeshkumar5147 --password-stdin'
             }
         }
         stage('Docker image push ') {
             steps {
-                sh'docker image push rishikeshkumar5147/httpjenkins'
+                sh'docker image push 
             }
         }
         stage('Remove Container') {
@@ -29,7 +29,7 @@ pipeline {
         }
                 stage('Run COntainer ') {
             steps {
-                sh'docker container run -d --name mywebsite -p 9090:80  rishikeshkumar5147/httpjenkins'
+                sh'docker container run -d --name mywebsite -p 9090:80  
             }
         }
     }
